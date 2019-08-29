@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  java-debian-buster-test:
+    build: .
+    image: "mhedev/java-debian-buster-test:v1"
+    container_name: "java-debian-buster-test"
+    hostname: "java-debian-buster-test"
+    environment:
+      - SERVICE_NAME=java-debian-buster-test
+#    volumes:
+#      - .:/usr/src/app
+    command: "java -jar ./target/HelloWorld-0.0.1-SNAPSHOT.jar"
